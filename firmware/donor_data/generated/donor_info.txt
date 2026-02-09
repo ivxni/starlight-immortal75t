@@ -1,0 +1,33 @@
+============================================================
+STARLIGHT DMA FIRMWARE - DONOR DEVICE INFO
+============================================================
+
+Vendor ID:            0x14C3
+Device ID:            0x7925
+Revision ID:          0x00
+Class Code:           0x028000
+Subsystem Vendor ID:  0x1A3B
+Subsystem Device ID:  0x6002
+BAR0:                 0xDC800004
+
+DSN: NOT FOUND (no extended capability 0x0003)
+
+Capability Chain:
+  @ 0x80: ID=0x10 (PCIe) -> next=0xE0
+  @ 0xE0: ID=0x05 (MSI) -> next=0xF8
+  @ 0xF8: ID=0x01 (PM (Power Management)) -> next=0x00
+
+============================================================
+VALUES FOR pcileech_pcie_cfg_a7.sv:
+============================================================
+  DSN:  rw[127:64] <= 64'h0000000000000000;
+
+VALUES FOR Vivado PCIe IP Core Configuration:
+  Vendor ID:          14C3
+  Device ID:          7925
+  Revision ID:        00
+  Subsystem Vendor:   1A3B
+  Subsystem Device:   6002
+  Class Code Base:    02
+  Class Code Sub:     80
+  Class Code Iface:   00
