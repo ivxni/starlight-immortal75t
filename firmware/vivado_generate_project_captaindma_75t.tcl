@@ -107,6 +107,7 @@ set obj [get_filesets sources_1]
 # Import local files from the original project
 set files [list \
  [file normalize "${origin_dir}/src/pcileech_header.svh"]\
+ [file normalize "${origin_dir}/src/starlight_donor_cfg.svh"]\
  [file normalize "${origin_dir}/src/pcileech_com.sv" ]\
  [file normalize "${origin_dir}/src/pcileech_fifo.sv"]\
  [file normalize "${origin_dir}/src/pcileech_ft601.sv"]\
@@ -125,6 +126,10 @@ set imported_files [import_files -fileset sources_1 $files]
 
 # Set 'sources_1' fileset file properties for local files
 set file "src/pcileech_header.svh"
+set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+set_property -name "file_type" -value "Verilog Header" -objects $file_obj
+
+set file "src/starlight_donor_cfg.svh"
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "Verilog Header" -objects $file_obj
 
